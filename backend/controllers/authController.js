@@ -144,3 +144,5 @@ exports.logout = catchAsync(async (req, res, next) => {
     status: "success",
   });
 });
+
+// this is jsut to test that it still is ignoring it
