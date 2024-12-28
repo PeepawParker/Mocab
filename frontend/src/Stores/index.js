@@ -3,7 +3,7 @@ import storage from "redux-persist/lib/storage";
 import { persistReducer } from "redux-persist";
 
 import userReducer from "./userStore";
-import sseReducer from "./sseStore";
+import vocabReducer from "./vocabStore";
 
 const authMiddleware = () => (next) => (action) => {
   if (
@@ -28,7 +28,7 @@ const persistConfig = {
 // Combine reducers
 const reducer = combineReducers({
   user: userReducer,
-  sse: sseReducer,
+  vocab: vocabReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, reducer);
@@ -40,7 +40,7 @@ const store = configureStore({
     getDefaultMiddleware({
       serializableCheck: false,
       // eslint-disable-next-line no-undef
-    }).concat(authMiddleware, loggingMiddleware),
+    }).concat(authMiddleware),
 });
 
 export default store;

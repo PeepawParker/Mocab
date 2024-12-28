@@ -20,6 +20,7 @@
     "http": "^0.0.1-security",
     "jsonwebtoken": "^9.0.2",
     "nodemon": "^3.1.7",
+    "openai": "^4.76.3",
     "pg": "^8.13.1"
   }
 }

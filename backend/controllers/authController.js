@@ -15,10 +15,9 @@ const createSendToken = (user, statusCode, res) => {
   const token = signToken(user.user_id);
   const cookieOptions = {
     expires: new Date(
-      Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000 // 90 days
+      Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
     ),
     httpOnly: true,
-    // I changed this from laxx if there are some problems
     sameSite: "strict",
     path: "/",
   };
@@ -37,12 +36,12 @@ const createSendToken = (user, statusCode, res) => {
   });
 };
 
-// All JWT stuff will basically be handled exclusively in here
-
 exports.login = catchAsync(async (req, res, next) => {
   const email = req.body.email;
   const username = req.body.username;
   const password = req.body.password;
+
+  console.log("here is the email", email);
 
   const user = !username
     ? await userModel.getUserByEmail(email)
@@ -144,5 +143,3 @@ exports.logout = catchAsync(async (req, res, next) => {
     status: "success",
   });
 });
-
-// this is jsut to test that it still is ignoring it

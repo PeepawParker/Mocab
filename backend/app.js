@@ -21,6 +21,8 @@ app.use(cookieParser());
 
 // Routes
 app.use("/api/v1/users", require("./routes/userRoutes"));
+app.use("/api/v1/vocab", require("./routes/vocabRoutes"));
+app.use("/api/v1/gpt", require("./routes/gptRoutes"));
 
 // 404 handler
 app.all("*", (req, res, next) => {

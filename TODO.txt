@@ -1,0 +1,21 @@
+Make sure that the cookie and JWT refreshes the 7 days everytime someone enters the site and has an active cookie and JWT
+
+A user will submit a word and get back a couple different definitions, if the user cant tell which definition best fits the context it can then sumbit the entire sentence and it will get put through to chat gpt and it will decide for you basically
+
+have a check option for the user to stay logged in on this computer and this will like keep the cookie forever, but if they dont check this have it log them out after they leave or close the site 
+
+when A user selects a word it will start an array basically of the words that were used in the current session, and then when they press the end session button it will ask the user if they would like to do a small quiz to cement these words in their brain
+
+make sure that if a user selects a word and then later down the line they sselect that word again it will still give them that word to practice and wont say that the word is already in the database or something
+
+Have like a daily word to learn that users can add to their words to learnlibrary
+
+Also after a quiz have a button to remove a word to learn if a user feels that they have mastered that word
+
+Make a flashcards section to work on words too, it'll probably prioritize the words you haven't answered correctly as often, and then there will be a correct/incorrect button to continue to keep track of the words that the user is doing good/bad on
+
+Instead of the quiz I think that will be a seperate entity entirely and instead after you finish a session it will show a bunch of flashcards with the word and an example sentence and from there you can say if you got the meaning/definition correct or incorrect
+
+We are going to make it where when a user submits a word depending on the definiton we will have chat gpt write a sentence using the word with the given definition, (also include like a button that says sentence doesn't make sense where we can make a new sentence if chatgpt spits out some garbage)
+
+get a list of a couple hundred uncommon but not exceedingly rare words to fill if a user doesn't already have a bunch of words associated with there user
